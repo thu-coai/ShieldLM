@@ -51,6 +51,10 @@ We list some application scenarios of ShieldLM:
 
 Yes. A simple way to implement this is to set the query to an empty string or some general comment such as "Say anything you want". Moreover, in some cases where the queries are very long and don't contribute to the detection results, you can drop the queries using the above methods, which might bring similar performance but less inference time.
 
+4. How to decrease the inference time?
+
+If you only need to obtain the safety judgement, then you can skip the generation of analysis by setting `max_new_tokens` to a small value (e.g., 8).
+
 ## Performances
 We present some evaluation results of ShieldLM here. Please refer to [our paper](https://arxiv.org/abs/2402.16444) for more detailed results.
 
