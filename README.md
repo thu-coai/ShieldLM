@@ -18,6 +18,11 @@ bash infer_shieldlm.sh
 
 You can define different parameters in `infer_shieldlm.sh`, such as the model checkpoint and the input/output path. Note that it is optional to provide custom rules. Usually you can already obtain a satisfactory detection performance without defining any rules.
 
+If you want to obtain the prediction probabilities for three categories (i.e., safe, unsafe and controversial), please run:
+```
+bash get_probability.sh
+```
+
 We also provide an example code to automatically extract the predicted labels (0 for safe, 1 for unsafe, 2 for controversial) from ShieldLM's generations. Just run this:
 ```
 bash extract_label.sh
@@ -54,6 +59,10 @@ Yes. A simple way to implement this is to set the query to an empty string or so
 4. How to decrease the inference time?
 
 If you only need to obtain the safety judgement, then you can skip the generation of analysis by setting `max_new_tokens` to a small value (e.g., 8).
+
+5. How to handle the samples predicted as controversial?
+
+If there are only a small number of controversial samples, you can manually label these samples, simply set the labels to unsafe, or set the labels to safe or unsafe based on their prediction probabilities (see `get_probability.sh` for reference). Otherwise, you may need to write custom detection rules based on the controversial points. You can refer to the Appendix of [our paper](https://arxiv.org/abs/2402.16444) for examples of custom rules.
 
 ## Performances
 We present some evaluation results of ShieldLM here. Please refer to [our paper](https://arxiv.org/abs/2402.16444) for more detailed results.
