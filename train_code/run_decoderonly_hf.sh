@@ -1,7 +1,6 @@
 data_dir=./sft_data/combine_rules_qwen_format_label_first
-model_name=Qwen1.5-14B-Chat
 model_name=Qwen-14B-Chat
-model_dir=/data/zhangzhexin/huggingface_pretrained_models/${model_name}
+model_dir=Qwen/Qwen-14B-Chat
 max_epoch=3
 deepspeed --include localhost:2,3,5,6 --master_port=20954 \
     train_decoderonly_hf.py --ds_config=ds_config_hf.json \

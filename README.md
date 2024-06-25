@@ -55,6 +55,7 @@ cd train_code
 python sft_data_process.py
 bash run_decoder_hf.sh
 ```
+After training for three epochs, use the checkpoint for inference. Note that you can also freely change the hyperparameters to obtain better performance.
 We used 4 A100 GPUs (80 GB each) to run the training.
 
 ## FAQs
