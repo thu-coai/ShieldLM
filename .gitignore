@@ -1,1 +1,6 @@
 opensource_models
+hf_save
+__pycache__
+combine_rules
+combine_rules_qwen_format
+combine_rules_qwen_format_label_first
