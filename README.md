@@ -7,6 +7,8 @@ This is the codebase for our paper "[ShieldLM: Empowering LLMs as Aligned, Custo
 ShieldLM is a bilingual (Chinese and English) safety detector that mainly aims to help to detect safety issues in LLMs' generations. It aligns with general human safety standards, supports fine-grained customizable detection rules, and provides explanations for its decisions. The overall performance of ShieldLM is impressive, outperforming strong baselines (e.g., GPT-4, Llama Guard 2 and Perspective API) across 4 ID and OOD test sets. 
 
 ## News <!-- omit from toc -->
+- **🎉 `2024/09/29`:** Our paper has been accepted to EMNLP 2024 Findings!
+
 - **🎉 `2024/06/25`:** We have open-sourced a portion of our training set, including 2,000 English samples and 2,000 Chinese samples. We also provide the related data processing and training code. 
 
 - **🎉 `2024/06/25`:** We have added the evaluation results of Llama Guard 2 and found that ShieldLM outperforms Llama Guard 2 on all four evaluated datasets.
